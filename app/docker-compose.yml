@@ -1,0 +1,17 @@
+version: '3'
+services:
+  back:
+    image: gabrielmatar/my-back:latest
+    ports:
+      - "5000"
+    environment:
+      - CURRENT_ENVIRONMENT=dev
+
+  front:
+    image: gabrielmatar/my-front:latest
+    ports:
+      - "8081:80"
+    environment:
+      - WS_BACK_URL=http://localhost:8080
+    # volumes:
+    #   - ./front-logs:/app/logs

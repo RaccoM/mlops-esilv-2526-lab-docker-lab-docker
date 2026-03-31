@@ -1,0 +1,3 @@
+docker stop my-back-container my-front-container
+docker rm my-back-container my-front-container
+docker rmi gabrielmatar/my-back:latest gabrielmatar/my-front:latest
